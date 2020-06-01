@@ -10,5 +10,8 @@ https://codesandbox.io/s/744n0nmvl0?file=/index.js:570-571
 And then I also tried the below, but I looked and react-table doesn't seem to have a style sheet so this might be outdated? Not sure.
 https://stackblitz.com/edit/how-to-add-a-style-element-inside-a-cell-when-the-text-inside-c?file=index.js
 
+# Solution
+I was able to pass in the cell value to the cell name using:
+`return <td {...cell.getCellProps({className: cell.value})}>{cell.render('Cell')}</td>`
 
 
